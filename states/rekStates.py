@@ -19,5 +19,6 @@ class Number(StatesGroup):
 
 
 class DelUser(StatesGroup):
+    add = State()
     user = State()
     fix = State()

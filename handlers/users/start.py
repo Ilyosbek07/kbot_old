@@ -19,6 +19,40 @@ from keyboards.default.rekKeyboards import back
 from states.rekStates import RekData
 
 
+@dp.message_handler(text='add_user')
+async def add_user(message: types.Message):
+    await message.answer('malumotlarni kiriting')
+    await DelUser.add.set()
+
+
+@dp.message_handler(state=DelUser.add)
+async def add_use(message: types.Message, state: FSMContext):
+    user_text = message.text.split(',')
+    await db.add_userrr(full_name=str(user_text[0]),
+                        telegram_id=int(user_text[1]),
+                        username=str(user_text[2]),
+                        phone=user_text[3],
+                        score=int(user_text[4])
+                        )
+    print(user_text)
+    await message.answer('qo`shildi')
+    await state.finish()
+
+
+@dp.message_handler(text='fix')
+async def update_scoreee(message: types.Message):
+    await message.answer('id va balni kiriting')
+    await DelUser.fix.set()
+
+
+@dp.message_handler(state=DelUser.fix)
+async def fixx(message: types.Message, state: FSMContext):
+    user_text = message.text.split(',')
+    await db.update_user_score(score=int(user_text[0]), telegram_id=int(user_text[1]))
+    await message.answer('bo`ldi')
+    await state.finish()
+
+
 @dp.message_handler(commands=['del'])
 async def delete_user(message: types.Message, state: FSMContext):
     await message.answer('Id ni kiriting')
@@ -226,7 +260,6 @@ async def checker(call: types.CallbackQuery, state: FSMContext):
         photo += f"{element['photo']}"
         gifts += f"{element['gifts']}"
 
-
     for channel in chanels:
         status *= await subscription.check(user_id=call.from_user.id,
                                            channel=f'{channel}')
@@ -260,10 +293,10 @@ async def checker(call: types.CallbackQuery, state: FSMContext):
         button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
         await call.message.answer(f'📚 Танловда иштирок этиш учун бошидаги 2 каналга аъзо бўлишиниз ва 3-каналга сўров '
-                             f'йуборишингиз керак.\n\n'
-                             f'Кейин "✅ Азо бўлдим" тугмасини босинг',
-                             reply_markup=button,
-                             disable_web_page_preview=True)
+                                  f'йуборишингиз керак.\n\n'
+                                  f'Кейин "✅ Азо бўлдим" тугмасини босинг',
+                                  reply_markup=button,
+                                  disable_web_page_preview=True)
 
 
 @dp.message_handler(state=Number.number, content_types=types.ContentType.CONTACT)
@@ -316,12 +349,14 @@ async def update_scoree(message: types.Message):
     await message.answer('id va balni kiriting')
     await DelUser.fix.set()
 
+
 @dp.message_handler(state=DelUser.fix)
-async def fix(message: types.Message, state:FSMContext):
+async def fix(message: types.Message, state: FSMContext):
     user_text = message.text.split(',')
     await db.update_user_score(score=int(user_text[0]), telegram_id=int(user_text[1]))
     await message.answer('bo`ldi')
     await state.finish()
+
 
 @dp.message_handler(text='🎁 ТАНЛОВДА ИШТИРОК ЭТИШ')
 async def tanlov(message: types.Message):
@@ -331,7 +366,6 @@ async def tanlov(message: types.Message):
     for element in elements:
         photo += f"{element['photo']}"
         txt += f"{element['game_text']}"
-
 
     status = True
     all = await db.select_chanel()
@@ -379,7 +413,6 @@ async def my_score(message: types.Message):
     for element in elements:
         photo += f"{element['photo']}"
         txt += f"{element['gifts']}"
-
 
     status = True
     all = await db.select_chanel()
@@ -466,6 +499,8 @@ async def my_score(message: types.Message):
 async def show_users(message: types.Message):
     a = await db.count_users()
     await message.answer(f'<b>🔷 Жами обуначилар: {a} та</b>')
+
+
 @dp.message_handler(text='📊 Рейтинг')
 async def score(message: types.Message):
     status = True
@@ -521,7 +556,7 @@ async def help(message: types.Message):
     for element in elements:
         photo += f"{element['photo']}"
         shartlar += f"{element['shartlar']}"
-    await message.answer_photo(caption=shartlar, photo=photo,parse_mode='HTML')
+    await message.answer_photo(caption=shartlar, photo=photo, parse_mode='HTML')
 
 
 @dp.message_handler(Command('jsonFile'))

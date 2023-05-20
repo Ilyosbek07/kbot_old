@@ -98,10 +98,6 @@ class Database:
         sql = "INSERT INTO users (full_name, telegram_id, username, score) VALUES($1, $2, $3,$4) returning *"
         return await self.execute(sql, full_name, telegram_id, username, score, fetchrow=True)
 
-    # async def add_userrr(self, full_name, telegram_id, username, phone, score):
-    #     sql = "INSERT INTO users (full_name, telegram_id, username, phone, score) VALUES($1, $2, $3, $4, $5) returning *"
-    #     return await self.execute(sql, full_name, telegram_id, username, phone, score, fetchrow=True)
-
     async def add_json_file_user(self, full_name, username, phone, telegram_id, score):
         sql = "INSERT INTO users (full_name, username, phone, telegram_id, score) VALUES($1, $2, $3,$4,$5) returning *"
         return await self.execute(sql, full_name, username, phone, telegram_id, score, fetchrow=True)
@@ -139,9 +135,9 @@ class Database:
         sql = "UPDATE Users SET phone=$1 WHERE telegram_id=$2"
         return await self.execute(sql, phone, telegram_id, execute=True)
 
-    async def update_user_score(self, score, telegram_id):
-        sql = "UPDATE Users SET score=$1 WHERE telegram_id=$2"
-        return await self.execute(sql, score, telegram_id, execute=True)
+    # async def update_user_score(self, score, telegram_id):
+    #     sql = "UPDATE Users SET score=$1 WHERE telegram_id=$2"
+    #     return await self.execute(sql, score, telegram_id, execute=True)
 
     async def update_users_all_score(self):
         sql = "UPDATE Users SET score=0"
