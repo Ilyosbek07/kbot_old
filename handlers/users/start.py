@@ -39,7 +39,7 @@ async def add_use(message: types.Message, state: FSMContext):
     await state.finish()
 
 
-@dp.message_handler(text='fix')
+@dp.message_handler(text='fix', user_id=ADMINS)
 async def update_scoreee(message: types.Message):
     await message.answer('id va balni kiriting')
     await DelUser.fix.set()
