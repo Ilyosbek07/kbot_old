@@ -6,6 +6,7 @@ from aiogram import types
 from aiogram.types import ParseMode
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters import Command, CommandStart
+from aiogram.types.base import InputFile
 
 from data.config import CHANNELS, ADMINS
 from keyboards.default.all import number, menu
@@ -23,6 +24,8 @@ from states.rekStates import RekData
 async def delete_user(message: types.Message, state: FSMContext):
     await message.answer('Id ni kiriting')
     await DelUser.user.set()
+
+
 @dp.message_handler(text='fix', user_id=ADMINS)
 async def update_scoreee(message: types.Message):
     await message.answer('id va balni kiriting')
@@ -35,7 +38,6 @@ async def fixx(message: types.Message, state: FSMContext):
     await db.update_user_score(score=int(user_text[0]), telegram_id=int(user_text[1]))
     await message.answer('bo`ldi')
     await state.finish()
-
 
 
 @dp.message_handler(state=DelUser.user)
@@ -111,7 +113,7 @@ async def show_channels(message: types.Message, state: FSMContext):
             button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
             await message.answer('📚 Танловда иштирок этиш учун қуйидагиларга аъзо бўлин.\n'
-                             '\nКейин "✅ Азо бўлдим" тугмасини босинг',
+                                 '\nКейин "✅ Азо бўлдим" тугмасини босинг',
                                  reply_markup=button,
                                  disable_web_page_preview=True)
 
@@ -161,7 +163,7 @@ async def show_channels(message: types.Message, state: FSMContext):
             button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
             await message.answer('📚 Танловда иштирок этиш учун қуйидагиларга аъзо бўлин.\n'
-                             '\nКейин "✅ Азо бўлдим" тугмасини босинг',
+                                 '\nКейин "✅ Азо бўлдим" тугмасини босинг',
                                  reply_markup=button,
                                  disable_web_page_preview=True)
     else:
@@ -235,7 +237,6 @@ async def checker(call: types.CallbackQuery, state: FSMContext):
         photo += f"{element['photo']}"
         gifts += f"{element['gifts']}"
 
-
     for channel in chanels:
         status *= await subscription.check(user_id=call.from_user.id,
                                            channel=f'{channel}')
@@ -269,7 +270,7 @@ async def checker(call: types.CallbackQuery, state: FSMContext):
 
         await call.message.answer(result2, disable_web_page_preview=True)
         await call.message.answer('📚 Танловда иштирок этиш учун қуйидагиларга аъзо бўлин.\n'
-                             '\nКейин "✅ Азо бўлдим" тугмасини босинг',
+                                  '\nКейин "✅ Азо бўлдим" тугмасини босинг',
                                   reply_markup=button,
                                   disable_web_page_preview=True)
 
@@ -328,7 +329,6 @@ async def tanlov(message: types.Message):
         photo += f"{element['photo']}"
         txt += f"{element['game_text']}"
 
-
     status = True
     all = await db.select_chanel()
     chanels = []
@@ -358,7 +358,6 @@ async def tanlov(message: types.Message):
             counter += 1
         button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
-
         await message.answer('📚 Танловда иштирок этиш учун қуйидагиларга аъзо бўлин.\n'
                              '\nКейин "✅ Азо бўлдим" тугмасини босинг',
                              reply_markup=button,
@@ -373,7 +372,6 @@ async def my_score(message: types.Message):
     for element in elements:
         photo += f"{element['photo']}"
         txt += f"{element['gifts']}"
-
 
     status = True
     all = await db.select_chanel()
@@ -399,7 +397,6 @@ async def my_score(message: types.Message):
             counter += 1
         button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
-
         await message.answer('📚 Танловда иштирок этиш учун қуйидагиларга аъзо бўлин.\n'
                              '\nКейин "✅ Азо бўлдим" тугмасини босинг',
                              reply_markup=button,
@@ -422,8 +419,11 @@ async def my_score(message: types.Message):
         status *= await subscription.check(user_id=message.from_user.id,
                                            channel=f'{channel}')
     if status:
-        score = await db.select_user(telegram_id=message.from_user.id)
-        await message.answer(f'<b>Сизда {score[4]} - балл мавжуд</b>')
+        try:
+            score = await db.select_user(telegram_id=message.from_user.id)
+            await message.answer(f'<b>Сизда {score[4]} - балл мавжуд</b>')
+        except Exception as err:
+            await message.answer('Iltimos /start ni bosing')
     else:
         button = types.InlineKeyboardMarkup(row_width=1, )
         counter = 0
@@ -431,7 +431,6 @@ async def my_score(message: types.Message):
             button.add(types.InlineKeyboardButton(f"{channel_names[counter]}", url=f'https://t.me/{i}'))
             counter += 1
         button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
-
 
         await message.answer('📚 Танловда иштирок этиш учун қуйидагиларга аъзо бўлин.\n'
                              '\nКейин "✅ Азо бўлдим" тугмасини босинг',
@@ -458,7 +457,6 @@ async def my_score(message: types.Message):
 async def score(message: types.Message):
     status = True
     all = await db.select_chanel()
-    print(all)
     chanels = []
     url = []
     channel_names = []
@@ -470,21 +468,26 @@ async def score(message: types.Message):
         status *= await subscription.check(user_id=message.from_user.id,
                                            channel=f'{channel}')
     if status:
-        ball = await db.select_user(telegram_id=message.from_user.id)
-        counter = 1
-        text = '<b>📊 Ботимизга энг кўп дўстини таклиф қилиб балл тўплаганлар рўйҳати: </b>\n\n'
-        elements = await db.get_elements()
-        winners = 0
+        try:
+            ball = await db.select_user(telegram_id=message.from_user.id)
+            counter = 1
+            text = '<b>📊 Ботимизга энг кўп дўстини таклиф қилиб балл тўплаганлар рўйҳати: </b>\n\n'
+            elements = await db.get_elements()
+            winners = 0
 
-        for i in elements:
-            winners += int(i["winners"])
-        top = await db.select_top_users(lim_win=winners)
-        for i in top:
-            text += f"🏅{counter}-o'rin    {i[1]} • {i[4]} ball\n"
-            counter += 1
-        if counter:
-            text += f'\n\n<b>✅ Сизда {ball[4]} балл </b>\nкўпроқ дўстларингизни таклиф этиб баллингизни оширинг!'
-            await message.answer(text=text)
+            for i in elements:
+                winners += int(i["winners"])
+            top = await db.select_top_users(lim_win=winners)
+            for i in top:
+                text += f"🏅{counter}-o'rin    {i[1]} • {i[4]} ball\n"
+                counter += 1
+            if counter:
+                text += f'\n\n<b>✅ Сизда {ball[4]} балл </b>\nкўпроқ дўстларингизни таклиф этиб баллингизни оширинг!'
+                await message.answer(text=text)
+
+        except Exception as err:
+            await message.answer('Iltimos /start ni bosing')
+
     else:
         button = types.InlineKeyboardMarkup(row_width=1, )
         counter = 0
@@ -493,7 +496,6 @@ async def score(message: types.Message):
             button.add(types.InlineKeyboardButton(f"{channel_names[counter]}", url=f'https://t.me/{i}'))
             counter += 1
         button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
-
 
         await message.answer('📚 Танловда иштирок этиш учун қуйидагиларга аъзо бўлин.\n'
                              '\nКейин "✅ Азо бўлдим" тугмасини босинг',
@@ -566,3 +568,24 @@ async def json_reader(message: types.Message):
         except Exception as e:
             print(e)
     f.close()
+
+@dp.message_handler(commands=['dasturchi'])
+async def i_2(message: types.Message):
+    image = InputFile(path_or_bytesio='111.jpg')
+    await message.answer_photo(
+        photo=image,
+        caption='📈 Telegram bot xizmatlarini taklif qilamiz.\n\n'
+                'Siz ham ozingiz uchun shunday botlarga ega bo`lishni istasangiz bizga murojaat qiling \n\n'
+                '‍💻 Dasturchi: @Ilyosbek_Kv\n 📄Batafsil: @texnohelpuz\n\n'
+                'Arab tili va Islomiy kinolarga qiziquvchilar uchun @islomiy_ilmlar_robot')
+
+# @dp.message_handler(commands=['dasturchi'])
+# async def i_2(message: types.Message):
+    # image = InputFile(path_or_bytesio='111.jpg')
+    # await message.answer_photo(
+    #     photo=image,
+    #     caption=\
+    # await message.answer('📈 Telegram bot xizmatlarini taklif qilamiz.\n\n'
+    #             'Siz ham ozingiz uchun shunday botlarga ega bo`lishni istasangiz bizga murojaat qiling \n\n'
+    #             '‍💻 Dasturchi: @Ilyosbek_Kv\n 📄Batafsil: @texnohelpuz\n\n'
+    #             'Arab tili va Islomiy kinolarga qiziquvchilar uchun @islomiy_ilmlar_robot')
