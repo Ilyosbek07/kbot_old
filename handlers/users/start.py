@@ -571,7 +571,7 @@ async def json_reader(message: types.Message):
 
 @dp.message_handler(commands=['dasturchi'])
 async def i_2(message: types.Message):
-    image = InputFile(path_or_bytesio='111.jpg')
+    image = 'https://telegra.ph/file/b3033779713cd505f421b.jpg'
     await message.answer_photo(
         photo=image,
         caption='📈 Telegram bot xizmatlarini taklif qilamiz.\n\n'
