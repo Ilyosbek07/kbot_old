@@ -59,7 +59,8 @@ class Database:
         CREATE TABLE IF NOT EXISTS Channel (
         id SERIAL PRIMARY KEY,
         chanelll VARCHAR(301) NOT NULL,
-        url varchar(301) NOT NULL
+        url varchar(301) NOT NULL,
+        channel_name TEXT NULL
                 );
         """
         await self.execute(sql, execute=True)
@@ -158,9 +159,9 @@ class Database:
         sql = "SELECT * FROM Channel"
         return await self.execute(sql, fetch=True)
 
-    async def add_chanell(self, chanelll, url):
-        sql = "INSERT INTO Channel (chanelll, url) VALUES($1, $2) returning *"
-        return await self.execute(sql, chanelll, url, fetchrow=True)
+    async def add_chanell(self, chanelll, url,channel_name):
+        sql = "INSERT INTO Channel (chanelll, url,channel_name) VALUES($1, $2,$3) returning *"
+        return await self.execute(sql, chanelll, url,channel_name, fetchrow=True)
 
     async def get_chanel(self, channel):
         sql = f"SELECT * FROM Channel WHERE chanelll=$1"

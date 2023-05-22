@@ -27,7 +27,10 @@ async def add_channel(message: types.Message):
 async def add_username(message: types.Message, state: FSMContext):
     text = message.text
     if text[0] == '@':
-        await db.add_chanell(chanelll=f"{text}", url=f"{text[1:]}")
+        text_split = text.split(',')
+
+        await db.add_chanell(chanelll=f"{text_split[0]}",
+                             channel_name=f"{text_split[1]}", url=f"{text_split[0][1:]}")
         await message.answer("Qo'shildi", reply_markup=admin_key)
         await state.finish()
     elif text == '🔙️ Orqaga':
@@ -37,18 +40,23 @@ async def add_username(message: types.Message, state: FSMContext):
         split_chanel = message.text.split(',')
         chanel_lst = []
         url_lst = []
+        channel_name_lst = []
         for i in split_chanel:
             lst = i.split('and')
             chanel_lst.append(lst[0])
             url_lst.append(lst[1])
+            channel_name_lst.append(lst[2])
         chanel = f'{chanel_lst}'
         url = f'{url_lst}'
+        channel_name = f'{url_lst}'
         ch_text = chanel.replace("'", '')
         ch_text2 = ch_text.replace(" ", '')
         u_text = url.replace("'", '')
         u_text2 = u_text.replace(" ", '')
+        channel_name_text = channel_name.replace("'", '')
+        channel_name_text2 = channel_name_text.replace(" ", '')
 
-        await db.add_chanell(chanelll=ch_text2[1:-1], url=u_text2[1:-1])
+        await db.add_chanell(chanelll=ch_text2[1:-1], url=u_text2[1:-1],channel_name=channel_name_text2[1:-1])
         await message.answer("Qo'shildi", reply_markup=admin_key)
         await state.finish()
 
