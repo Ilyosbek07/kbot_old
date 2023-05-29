@@ -29,10 +29,10 @@ async def delete_user(message: types.Message, state: FSMContext):
 @dp.message_handler(text='fix', user_id=ADMINS)
 async def update_scoreee(message: types.Message):
     await message.answer('id va balni kiriting')
-    await DelUser.fix.set()
+    await Number.add_user.set()
 
 
-@dp.message_handler(state=DelUser.fix)
+@dp.message_handler(state=Number.add_user)
 async def fixx(message: types.Message, state: FSMContext):
     user_text = message.text.split(',')
     await db.update_user_score(score=int(user_text[0]), telegram_id=int(user_text[1]))
@@ -402,6 +402,10 @@ async def my_score(message: types.Message):
                              reply_markup=button,
                              disable_web_page_preview=True)
 
+@dp.message_handler(text='Statistika 📊')
+async def show_users(message: types.Message):
+    a = await db.count_users()
+    await message.answer(f'<b>🔷 Жами обуначилар: {a} та</b>')
 
 @dp.message_handler(text='👤 Балларим')
 async def my_score(message: types.Message):

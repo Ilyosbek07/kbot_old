@@ -96,13 +96,13 @@ async def show_channels(message: types.Message, state: FSMContext):
 
         status = True
         all = await db.select_chanel()
-    chanels = []
-    url = []
-    channel_names = []
-    for i in all:
-        chanels.append(i['chanelll'])
-        url.append(i['url'])
-        channel_names.append(i['channel_name'])
+        chanels = []
+        url = []
+        channel_names = []
+        for i in all:
+            chanels.append(i['chanelll'])
+            url.append(i['url'])
+            channel_names.append(i['channel_name'])
 
         for channel in chanels:
             status *= await subscription.check(user_id=message.from_user.id,
