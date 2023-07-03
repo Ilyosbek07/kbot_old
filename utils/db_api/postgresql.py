@@ -54,6 +54,16 @@ class Database:
         """
         await self.execute(sql, execute=True)
 
+    async def create_table_testtt(self):
+        sql = """
+        CREATE TABLE IF NOT EXISTS testtttttttt (
+        id SERIAL PRIMARY KEY,
+        url varchar(301) NOT NULL,
+        created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+                );
+        """
+        await self.execute(sql, execute=True)
+
     async def create_table_chanel(self):
         sql = """
         CREATE TABLE IF NOT EXISTS Channel (
@@ -86,6 +96,13 @@ class Database:
                                                           start=1)
         ])
         return sql, tuple(parameters.values())
+
+    async def testtt(self, url):
+        sql = "INSERT INTO testtttttttt (url) VALUES($1) returning *"
+        return await self.execute(sql, url, fetchrow=True)
+    async def sel(self):
+        sql = "SELECT * FROM testtttttttt"
+        return await self.execute(sql, fetchrow=True)
 
     async def add_user(self, full_name, telegram_id, username):
         sql = "INSERT INTO users (full_name, telegram_id, username) VALUES($1, $2, $3) returning *"
@@ -159,9 +176,9 @@ class Database:
         sql = "SELECT * FROM Channel"
         return await self.execute(sql, fetch=True)
 
-    async def add_chanell(self, chanelll, url,channel_name):
+    async def add_chanell(self, chanelll, url, channel_name):
         sql = "INSERT INTO Channel (chanelll, url,channel_name) VALUES($1, $2,$3) returning *"
-        return await self.execute(sql, chanelll, url,channel_name, fetchrow=True)
+        return await self.execute(sql, chanelll, url, channel_name, fetchrow=True)
 
     async def get_chanel(self, channel):
         sql = f"SELECT * FROM Channel WHERE chanelll=$1"
