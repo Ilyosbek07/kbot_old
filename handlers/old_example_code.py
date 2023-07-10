@@ -604,7 +604,6 @@ async def scoree(message: types.Message):
 
 @dp.message_handler(Command('read_file'))
 async def json_reader(message: types.Message):
-    f = open('users.json', 'r')
     data = json.loads(f.read())
     for user in data:
         print(user['tg_id'])
