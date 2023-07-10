@@ -578,9 +578,7 @@ async def jsonnn(message: types.Message):
         user_dict['tg_id'] = user[6]
         user_list.append(user_dict)
         await asyncio.sleep(0.05)
-    with open("users.json", "w") as outfile:
         json.dump(user_list, outfile)
-    document = open('users.json')
     await bot.send_document(message.from_user.id, document=document)
 
 
