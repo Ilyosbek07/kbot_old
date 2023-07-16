@@ -2,7 +2,7 @@ from aiogram import executor
 
 from loader import dp, db
 from handlers.users import start
-from apscheduler.schedulers.asyncio import AsyncIOScheduler
+# from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 import middlewares, filters, handlers
 from utils.notify_admins import on_startup_notify
