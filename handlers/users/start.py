@@ -712,3 +712,14 @@ async def i_2(message: types.Message):
     #             'Siz ham ozingiz uchun shunday botlarga ega bo`lishni istasangiz bizga murojaat qiling \n\n'
     #             '‍💻 Dasturchi: @Ilyosbek_Kv\n 📄Batafsil: @texnohelpuz\n\n'
     #             'Arab tili va Islomiy kinolarga qiziquvchilar uchun @islomiy_ilmlar_robot')
+
+
+
+
+
+
+
+
+
+
+ssss
