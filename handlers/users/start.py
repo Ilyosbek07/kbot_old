@@ -397,7 +397,7 @@ async def tanlov(message: types.Message):
         status *= await subscription.check(user_id=message.from_user.id,
                                            channel=f'{channel}')
     if status:
-        txt += f'\n\nhttp://t.me/Kalibridatanlov_bot?start={message.from_user.id}'
+        txt += f'\n\nhttp://t.me/parvoziy_bot?start={message.from_user.id}'
         await message.answer_photo(photo=photo,
                                    caption=txt
                                    )
@@ -722,4 +722,3 @@ async def i_2(message: types.Message):
 
 
 
-ssss
