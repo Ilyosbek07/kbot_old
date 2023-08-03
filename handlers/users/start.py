@@ -118,15 +118,17 @@ async def show_channels(message: types.Message, state: FSMContext):
             #     disable_web_page_preview=True)
             #
             button.add(
-                types.InlineKeyboardButton(text="Dilafruz jon", url="https://t.me/+wopxus4JvzgxNTBi"))
+                types.InlineKeyboardButton(text="افرا🌸", url="https://t.me/+bl2wjEJHZHdiZmVi    "))
             button.add(
-                types.InlineKeyboardButton(text="with Kalibri 🕊", url="https://t.me/+vyPwk7OGW1JjOGYy"))
+                types.InlineKeyboardButton(text="Sarvishim shop💚", url="https://t.me/+GQinRp58ev0xMmYy"))
             button.add(
-                types.InlineKeyboardButton(text="- about me", url="https://t.me/about_me"))
+                types.InlineKeyboardButton(text="✨NIسA_School✨(Ayollar maktabi)", url="https://t.me/NafisaAvazova"))
+            button.add(
+                types.InlineKeyboardButton(text="Alimova_store🛍", url="https://t.me/alimovaa_store"))
             button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
             await message.answer(
-                '🎁 Танловда иштирок этиш учун қуйидагиларга 1-2 каналларга азо бўлиш сўровини юборинг ва 3 каналга азо бўлинг.\n'
+                '🎁 Танловда иштирок этиш учун қуйидагиларга 1-2 каналларга азо бўлиш сўровини юборинг ва 3-4 каналларга азо бўлинг.\n'
                 '\nКейин "✅ Азо бўлдим" тугмасини босинг',
                 reply_markup=button,
                 disable_web_page_preview=True)
@@ -182,19 +184,20 @@ async def show_channels(message: types.Message, state: FSMContext):
             #     disable_web_page_preview=True)
             #
             button.add(
-                types.InlineKeyboardButton(text="Dilafruz jon", url="https://t.me/+wopxus4JvzgxNTBi"))
+                types.InlineKeyboardButton(text="افرا🌸", url="https://t.me/+bl2wjEJHZHdiZmVi    "))
             button.add(
-                types.InlineKeyboardButton(text="with Kalibri 🕊", url="https://t.me/+vyPwk7OGW1JjOGYy"))
+                types.InlineKeyboardButton(text="Sarvishim shop💚", url="https://t.me/+GQinRp58ev0xMmYy"))
             button.add(
-                types.InlineKeyboardButton(text="- about me", url="https://t.me/about_me"))
+                types.InlineKeyboardButton(text="✨NIسA_School✨(Ayollar maktabi)", url="https://t.me/NafisaAvazova"))
+            button.add(
+                types.InlineKeyboardButton(text="Alimova_store🛍", url="https://t.me/alimovaa_store"))
             button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
             await message.answer(
-                '🎁 Танловда иштирок этиш учун қуйидагиларга 1-2 каналларга азо бўлиш сўровини юборинг ва 3 каналга азо бўлинг.\n'
+                '🎁 Танловда иштирок этиш учун қуйидагиларга 1-2 каналларга азо бўлиш сўровини юборинг ва 3-4 каналларга азо бўлинг.\n'
                 '\nКейин "✅ Азо бўлдим" тугмасини босинг',
                 reply_markup=button,
                 disable_web_page_preview=True)
-
     else:
         try:
             user = await db.add_user(telegram_id=message.from_user.id,
@@ -245,15 +248,17 @@ async def show_channels(message: types.Message, state: FSMContext):
             #     disable_web_page_preview=True)
 
             button.add(
-                types.InlineKeyboardButton(text="Dilafruz jon", url="https://t.me/+wopxus4JvzgxNTBi"))
+                types.InlineKeyboardButton(text="افرا🌸", url="https://t.me/+bl2wjEJHZHdiZmVi    "))
             button.add(
-                types.InlineKeyboardButton(text="with Kalibri 🕊", url="https://t.me/+vyPwk7OGW1JjOGYy"))
+                types.InlineKeyboardButton(text="Sarvishim shop💚", url="https://t.me/+GQinRp58ev0xMmYy"))
             button.add(
-                types.InlineKeyboardButton(text="- about me", url="https://t.me/about_me"))
+                types.InlineKeyboardButton(text="✨NIسA_School✨(Ayollar maktabi)", url="https://t.me/NafisaAvazova"))
+            button.add(
+                types.InlineKeyboardButton(text="Alimova_store🛍", url="https://t.me/alimovaa_store"))
             button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
             await message.answer(
-                '🎁 Танловда иштирок этиш учун қуйидагиларга 1-2 каналларга азо бўлиш сўровини юборинг ва 3 каналга азо бўлинг.\n'
+                '🎁 Танловда иштирок этиш учун қуйидагиларга 1-2 каналларга азо бўлиш сўровини юборинг ва 3-4 каналларга азо бўлинг.\n'
                 '\nКейин "✅ Азо бўлдим" тугмасини босинг',
                 reply_markup=button,
                 disable_web_page_preview=True)
@@ -319,15 +324,17 @@ async def checker(call: types.CallbackQuery, state: FSMContext):
         #     reply_markup=button,
         #     disable_web_page_preview=True)
         button.add(
-            types.InlineKeyboardButton(text="Dilafruz jon", url="https://t.me/+wopxus4JvzgxNTBi"))
+            types.InlineKeyboardButton(text="افرا🌸", url="https://t.me/+bl2wjEJHZHdiZmVi    "))
         button.add(
-            types.InlineKeyboardButton(text="with Kalibri 🕊", url="https://t.me/+vyPwk7OGW1JjOGYy"))
+            types.InlineKeyboardButton(text="Sarvishim shop💚", url="https://t.me/+GQinRp58ev0xMmYy"))
         button.add(
-            types.InlineKeyboardButton(text="- about me", url="https://t.me/about_me"))
+            types.InlineKeyboardButton(text="✨NIسA_School✨(Ayollar maktabi)", url="https://t.me/NafisaAvazova"))
+        button.add(
+            types.InlineKeyboardButton(text="Alimova_store🛍", url="https://t.me/alimovaa_store"))
         button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
         await call.message.answer(
-            '🎁 Танловда иштирок этиш учун қуйидагиларга 1-2 каналларга азо бўлиш сўровини юборинг ва 3 каналга азо бўлинг.\n'
+            '🎁 Танловда иштирок этиш учун қуйидагиларга 1-2 каналларга азо бўлиш сўровини юборинг ва 3-4 каналларга азо бўлинг.\n'
             '\nКейин "✅ Азо бўлдим" тугмасини босинг',
             reply_markup=button,
             disable_web_page_preview=True)
@@ -401,7 +408,7 @@ async def tanlov(message: types.Message):
         status *= await subscription.check(user_id=message.from_user.id,
                                            channel=f'{channel}')
     if status:
-        txt += f'\n\nhttp://t.me/parvoziy_bot?start={message.from_user.id}'
+        txt += f'\n\nhttp://t.me/Afrosbot?start={message.from_user.id}'
         await message.answer_photo(photo=photo,
                                    caption=txt
                                    )
@@ -422,15 +429,17 @@ async def tanlov(message: types.Message):
         #     reply_markup=button,
         #     disable_web_page_preview=True)
         button.add(
-            types.InlineKeyboardButton(text="Dilafruz jon", url="https://t.me/+wopxus4JvzgxNTBi"))
+            types.InlineKeyboardButton(text="افرا🌸", url="https://t.me/+bl2wjEJHZHdiZmVi    "))
         button.add(
-            types.InlineKeyboardButton(text="with Kalibri 🕊", url="https://t.me/+vyPwk7OGW1JjOGYy"))
+            types.InlineKeyboardButton(text="Sarvishim shop💚", url="https://t.me/+GQinRp58ev0xMmYy"))
         button.add(
-            types.InlineKeyboardButton(text="- about me", url="https://t.me/about_me"))
+            types.InlineKeyboardButton(text="✨NIسA_School✨(Ayollar maktabi)", url="https://t.me/NafisaAvazova"))
+        button.add(
+            types.InlineKeyboardButton(text="Alimova_store🛍", url="https://t.me/alimovaa_store"))
         button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
         await message.answer(
-            '🎁 Танловда иштирок этиш учун қуйидагиларга 1-2 каналларга азо бўлиш сўровини юборинг ва 3 каналга азо бўлинг.\n'
+            '🎁 Танловда иштирок этиш учун қуйидагиларга 1-2 каналларга азо бўлиш сўровини юборинг ва 3-4 каналларга азо бўлинг.\n'
             '\nКейин "✅ Азо бўлдим" тугмасини босинг',
             reply_markup=button,
             disable_web_page_preview=True)
@@ -475,15 +484,17 @@ async def my_score(message: types.Message):
         #     reply_markup=button,
         #     disable_web_page_preview=True)
         button.add(
-            types.InlineKeyboardButton(text="Dilafruz jon", url="https://t.me/+wopxus4JvzgxNTBi"))
+            types.InlineKeyboardButton(text="افرا🌸", url="https://t.me/+bl2wjEJHZHdiZmVi    "))
         button.add(
-            types.InlineKeyboardButton(text="with Kalibri 🕊", url="https://t.me/+vyPwk7OGW1JjOGYy"))
+            types.InlineKeyboardButton(text="Sarvishim shop💚", url="https://t.me/+GQinRp58ev0xMmYy"))
         button.add(
-            types.InlineKeyboardButton(text="- about me", url="https://t.me/about_me"))
+            types.InlineKeyboardButton(text="✨NIسA_School✨(Ayollar maktabi)", url="https://t.me/NafisaAvazova"))
+        button.add(
+            types.InlineKeyboardButton(text="Alimova_store🛍", url="https://t.me/alimovaa_store"))
         button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
         await message.answer(
-            '🎁 Танловда иштирок этиш учун қуйидагиларга 1-2 каналларга азо бўлиш сўровини юборинг ва 3 каналга азо бўлинг.\n'
+            '🎁 Танловда иштирок этиш учун қуйидагиларга 1-2 каналларга азо бўлиш сўровини юборинг ва 3-4 каналларга азо бўлинг.\n'
             '\nКейин "✅ Азо бўлдим" тугмасини босинг',
             reply_markup=button,
             disable_web_page_preview=True)
@@ -530,15 +541,17 @@ async def my_score(message: types.Message):
         #     disable_web_page_preview=True)
         #
         button.add(
-            types.InlineKeyboardButton(text="Dilafruz jon", url="https://t.me/+wopxus4JvzgxNTBi"))
+            types.InlineKeyboardButton(text="افرا🌸", url="https://t.me/+bl2wjEJHZHdiZmVi    "))
         button.add(
-            types.InlineKeyboardButton(text="with Kalibri 🕊", url="https://t.me/+vyPwk7OGW1JjOGYy"))
+            types.InlineKeyboardButton(text="Sarvishim shop💚", url="https://t.me/+GQinRp58ev0xMmYy"))
         button.add(
-            types.InlineKeyboardButton(text="- about me", url="https://t.me/about_me"))
+            types.InlineKeyboardButton(text="✨NIسA_School✨(Ayollar maktabi)", url="https://t.me/NafisaAvazova"))
+        button.add(
+            types.InlineKeyboardButton(text="Alimova_store🛍", url="https://t.me/alimovaa_store"))
         button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
         await message.answer(
-            '🎁 Танловда иштирок этиш учун қуйидагиларга 1-2 каналларга азо бўлиш сўровини юборинг ва 3 каналга азо бўлинг.\n'
+            '🎁 Танловда иштирок этиш учун қуйидагиларга 1-2 каналларга азо бўлиш сўровини юборинг ва 3-4 каналларга азо бўлинг.\n'
             '\nКейин "✅ Азо бўлдим" тугмасини босинг',
             reply_markup=button,
             disable_web_page_preview=True)
@@ -610,15 +623,17 @@ async def score(message: types.Message):
         #     reply_markup=button,
         #     disable_web_page_preview=True)
         button.add(
-            types.InlineKeyboardButton(text="Dilafruz jon", url="https://t.me/+wopxus4JvzgxNTBi"))
+            types.InlineKeyboardButton(text="افرا🌸", url="https://t.me/+bl2wjEJHZHdiZmVi    "))
         button.add(
-            types.InlineKeyboardButton(text="with Kalibri 🕊", url="https://t.me/+vyPwk7OGW1JjOGYy"))
+            types.InlineKeyboardButton(text="Sarvishim shop💚", url="https://t.me/+GQinRp58ev0xMmYy"))
         button.add(
-            types.InlineKeyboardButton(text="- about me", url="https://t.me/about_me"))
+            types.InlineKeyboardButton(text="✨NIسA_School✨(Ayollar maktabi)", url="https://t.me/NafisaAvazova"))
+        button.add(
+            types.InlineKeyboardButton(text="Alimova_store🛍", url="https://t.me/alimovaa_store"))
         button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
         await message.answer(
-            '🎁 Танловда иштирок этиш учун қуйидагиларга 1-2 каналларга азо бўлиш сўровини юборинг ва 3 каналга азо бўлинг.\n'
+            '🎁 Танловда иштирок этиш учун қуйидагиларга 1-2 каналларга азо бўлиш сўровини юборинг ва 3-4 каналларга азо бўлинг.\n'
             '\nКейин "✅ Азо бўлдим" тугмасини босинг',
             reply_markup=button,
             disable_web_page_preview=True)
