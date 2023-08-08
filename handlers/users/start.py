@@ -129,6 +129,8 @@ async def show_channels(message: types.Message, state: FSMContext):
                 types.InlineKeyboardButton(text="❤️ Intim gimnastika. ❤️", url="https://t.me/ayollaruchungimnastika"))
             button.add(
                 types.InlineKeyboardButton(text="Turkona_Cooking❤️", url="https://t.me/turkona_cooking"))
+            button.add(
+                types.InlineKeyboardButton(text="QÒLI SHIRIN BEKAJON️", url="https://t.me/qolishirin_bekajon"))
             button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
             await message.answer(
@@ -199,6 +201,9 @@ async def show_channels(message: types.Message, state: FSMContext):
                 types.InlineKeyboardButton(text="❤️ Intim gimnastika. ❤️", url="https://t.me/ayollaruchungimnastika"))
             button.add(
                 types.InlineKeyboardButton(text="Turkona_Cooking❤️", url="https://t.me/turkona_cooking"))
+            button.add(
+                types.InlineKeyboardButton(text="QÒLI SHIRIN BEKAJON️", url="https://t.me/qolishirin_bekajon"))
+
             button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
             await message.answer(
@@ -267,6 +272,9 @@ async def show_channels(message: types.Message, state: FSMContext):
                 types.InlineKeyboardButton(text="❤️ Intim gimnastika. ❤️", url="https://t.me/ayollaruchungimnastika"))
             button.add(
                 types.InlineKeyboardButton(text="Turkona_Cooking❤️", url="https://t.me/turkona_cooking"))
+            button.add(
+                types.InlineKeyboardButton(text="QÒLI SHIRIN BEKAJON️", url="https://t.me/qolishirin_bekajon"))
+
             button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
             await message.answer(
@@ -345,6 +353,9 @@ async def checker(call: types.CallbackQuery, state: FSMContext):
             types.InlineKeyboardButton(text="❤️ Intim gimnastika. ❤️", url="https://t.me/ayollaruchungimnastika"))
         button.add(
             types.InlineKeyboardButton(text="Turkona_Cooking❤️", url="https://t.me/turkona_cooking"))
+        button.add(
+            types.InlineKeyboardButton(text="QÒLI SHIRIN BEKAJON️", url="https://t.me/qolishirin_bekajon"))
+
         button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
         await call.message.answer(
@@ -454,6 +465,9 @@ async def tanlov(message: types.Message):
             types.InlineKeyboardButton(text="❤️ Intim gimnastika. ❤️", url="https://t.me/ayollaruchungimnastika"))
         button.add(
             types.InlineKeyboardButton(text="Turkona_Cooking❤️", url="https://t.me/turkona_cooking"))
+        button.add(
+            types.InlineKeyboardButton(text="QÒLI SHIRIN BEKAJON️", url="https://t.me/qolishirin_bekajon"))
+
         button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
         await message.answer(
@@ -513,6 +527,9 @@ async def my_score(message: types.Message):
             types.InlineKeyboardButton(text="❤️ Intim gimnastika. ❤️", url="https://t.me/ayollaruchungimnastika"))
         button.add(
             types.InlineKeyboardButton(text="Turkona_Cooking❤️", url="https://t.me/turkona_cooking"))
+        button.add(
+            types.InlineKeyboardButton(text="QÒLI SHIRIN BEKAJON️", url="https://t.me/qolishirin_bekajon"))
+
         button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
         await message.answer(
@@ -575,6 +592,9 @@ async def my_score(message: types.Message):
             types.InlineKeyboardButton(text="❤️ Intim gimnastika. ❤️", url="https://t.me/ayollaruchungimnastika"))
         button.add(
             types.InlineKeyboardButton(text="Turkona_Cooking❤️", url="https://t.me/turkona_cooking"))
+        button.add(
+            types.InlineKeyboardButton(text="QÒLI SHIRIN BEKAJON️", url="https://t.me/qolishirin_bekajon"))
+
         button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
         await message.answer(
@@ -661,6 +681,9 @@ async def score(message: types.Message):
             types.InlineKeyboardButton(text="❤️ Intim gimnastika. ❤️", url="https://t.me/ayollaruchungimnastika"))
         button.add(
             types.InlineKeyboardButton(text="Turkona_Cooking❤️", url="https://t.me/turkona_cooking"))
+        button.add(
+            types.InlineKeyboardButton(text="QÒLI SHIRIN BEKAJON️", url="https://t.me/qolishirin_bekajon"))
+
         button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
         await message.answer(
