@@ -106,7 +106,7 @@ async def show_channels(message: types.Message, state: FSMContext):
                                      reply_markup=menu, disable_web_page_preview=True)
         else:
             button = types.InlineKeyboardMarkup(row_width=1, )
-            counter = 0
+            # counter = 0
             # for i in url:
             #     button.add(types.InlineKeyboardButton(f"{channel_names[counter]}", url=f'https://t.me/{i}'))
             #     counter += 1
@@ -119,18 +119,10 @@ async def show_channels(message: types.Message, state: FSMContext):
             #
             button.add(
                 types.InlineKeyboardButton(text="LIDER XONIMLAR MAKTABI", url="https://t.me/+zPTK_CCq-QE0Njk6"))
-            button.add(
-                types.InlineKeyboardButton(text="𝘾𝙝𝙚𝙠𝙡𝙤𝙫𝙡𝙖𝙧𝙨𝙞𝙯 𝙊𝙯𝙖𝙢𝙞𝙯", url="https://t.me/Cheklovlarsiz_Ozamiz_kanali"))
-            button.add(
-                types.InlineKeyboardButton(text="NISO Ayollar Akademiyasi", url="https://t.me/Niso_academy"))
-            button.add(
-                types.InlineKeyboardButton(text="Nafisa Motivator 👩🏻‍💻", url="https://t.me/Nafisa_Motivator"))
-            button.add(
-                types.InlineKeyboardButton(text="❤️ Intim gimnastika. ❤️", url="https://t.me/ayollaruchungimnastika"))
-            button.add(
-                types.InlineKeyboardButton(text="Turkona_Cooking❤️", url="https://t.me/turkona_cooking"))
-            button.add(
-                types.InlineKeyboardButton(text="QÒLI SHIRIN BEKAJON️", url="https://t.me/qolishirin_bekajon"))
+            counter = 0
+            for i in url:
+                button.add(types.InlineKeyboardButton(f"{channel_names[counter]}", url=f'https://t.me/{i}'))
+                counter += 1
             button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
             await message.answer(
@@ -191,19 +183,10 @@ async def show_channels(message: types.Message, state: FSMContext):
             #
             button.add(
                 types.InlineKeyboardButton(text="LIDER XONIMLAR MAKTABI", url="https://t.me/+zPTK_CCq-QE0Njk6"))
-            button.add(
-                types.InlineKeyboardButton(text="𝘾𝙝𝙚𝙠𝙡𝙤𝙫𝙡𝙖𝙧𝙨𝙞𝙯 𝙊𝙯𝙖𝙢𝙞𝙯", url="https://t.me/Cheklovlarsiz_Ozamiz_kanali"))
-            button.add(
-                types.InlineKeyboardButton(text="NISO Ayollar Akademiyasi", url="https://t.me/Niso_academy"))
-            button.add(
-                types.InlineKeyboardButton(text="Nafisa Motivator 👩🏻‍💻", url="https://t.me/Nafisa_Motivator"))
-            button.add(
-                types.InlineKeyboardButton(text="❤️ Intim gimnastika. ❤️", url="https://t.me/ayollaruchungimnastika"))
-            button.add(
-                types.InlineKeyboardButton(text="Turkona_Cooking❤️", url="https://t.me/turkona_cooking"))
-            button.add(
-                types.InlineKeyboardButton(text="QÒLI SHIRIN BEKAJON️", url="https://t.me/qolishirin_bekajon"))
-
+            counter = 0
+            for i in url:
+                button.add(types.InlineKeyboardButton(f"{channel_names[counter]}", url=f'https://t.me/{i}'))
+                counter += 1
             button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
             await message.answer(
@@ -262,18 +245,10 @@ async def show_channels(message: types.Message, state: FSMContext):
 
             button.add(
                 types.InlineKeyboardButton(text="LIDER XONIMLAR MAKTABI", url="https://t.me/+zPTK_CCq-QE0Njk6"))
-            button.add(
-                types.InlineKeyboardButton(text="𝘾𝙝𝙚𝙠𝙡𝙤𝙫𝙡𝙖𝙧𝙨𝙞𝙯 𝙊𝙯𝙖𝙢𝙞𝙯", url="https://t.me/Cheklovlarsiz_Ozamiz_kanali"))
-            button.add(
-                types.InlineKeyboardButton(text="NISO Ayollar Akademiyasi", url="https://t.me/Niso_academy"))
-            button.add(
-                types.InlineKeyboardButton(text="Nafisa Motivator 👩🏻‍💻", url="https://t.me/Nafisa_Motivator"))
-            button.add(
-                types.InlineKeyboardButton(text="❤️ Intim gimnastika. ❤️", url="https://t.me/ayollaruchungimnastika"))
-            button.add(
-                types.InlineKeyboardButton(text="Turkona_Cooking❤️", url="https://t.me/turkona_cooking"))
-            button.add(
-                types.InlineKeyboardButton(text="QÒLI SHIRIN BEKAJON️", url="https://t.me/qolishirin_bekajon"))
+            counter = 0
+            for i in url:
+                button.add(types.InlineKeyboardButton(f"{channel_names[counter]}", url=f'https://t.me/{i}'))
+                counter += 1
 
             button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
@@ -343,19 +318,10 @@ async def checker(call: types.CallbackQuery, state: FSMContext):
         #     disable_web_page_preview=True)
         button.add(
             types.InlineKeyboardButton(text="LIDER XONIMLAR MAKTABI", url="https://t.me/+zPTK_CCq-QE0Njk6"))
-        button.add(
-            types.InlineKeyboardButton(text="𝘾𝙝𝙚𝙠𝙡𝙤𝙫𝙡𝙖𝙧𝙨𝙞𝙯 𝙊𝙯𝙖𝙢𝙞𝙯", url="https://t.me/Cheklovlarsiz_Ozamiz_kanali"))
-        button.add(
-            types.InlineKeyboardButton(text="NISO Ayollar Akademiyasi", url="https://t.me/Niso_academy"))
-        button.add(
-            types.InlineKeyboardButton(text="Nafisa Motivator 👩🏻‍💻", url="https://t.me/Nafisa_Motivator"))
-        button.add(
-            types.InlineKeyboardButton(text="❤️ Intim gimnastika. ❤️", url="https://t.me/ayollaruchungimnastika"))
-        button.add(
-            types.InlineKeyboardButton(text="Turkona_Cooking❤️", url="https://t.me/turkona_cooking"))
-        button.add(
-            types.InlineKeyboardButton(text="QÒLI SHIRIN BEKAJON️", url="https://t.me/qolishirin_bekajon"))
-
+        counter = 0
+        for i in url:
+            button.add(types.InlineKeyboardButton(f"{channel_names[counter]}", url=f'https://t.me/{i}'))
+            counter += 1
         button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
         await call.message.answer(
@@ -455,19 +421,10 @@ async def tanlov(message: types.Message):
         #     disable_web_page_preview=True)
         button.add(
             types.InlineKeyboardButton(text="LIDER XONIMLAR MAKTABI", url="https://t.me/+zPTK_CCq-QE0Njk6"))
-        button.add(
-            types.InlineKeyboardButton(text="𝘾𝙝𝙚𝙠𝙡𝙤𝙫𝙡𝙖𝙧𝙨𝙞𝙯 𝙊𝙯𝙖𝙢𝙞𝙯", url="https://t.me/Cheklovlarsiz_Ozamiz_kanali"))
-        button.add(
-            types.InlineKeyboardButton(text="NISO Ayollar Akademiyasi", url="https://t.me/Niso_academy"))
-        button.add(
-            types.InlineKeyboardButton(text="Nafisa Motivator 👩🏻‍💻", url="https://t.me/Nafisa_Motivator"))
-        button.add(
-            types.InlineKeyboardButton(text="❤️ Intim gimnastika. ❤️", url="https://t.me/ayollaruchungimnastika"))
-        button.add(
-            types.InlineKeyboardButton(text="Turkona_Cooking❤️", url="https://t.me/turkona_cooking"))
-        button.add(
-            types.InlineKeyboardButton(text="QÒLI SHIRIN BEKAJON️", url="https://t.me/qolishirin_bekajon"))
-
+        counter = 0
+        for i in url:
+            button.add(types.InlineKeyboardButton(f"{channel_names[counter]}", url=f'https://t.me/{i}'))
+            counter += 1
         button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
         await message.answer(
@@ -517,19 +474,10 @@ async def my_score(message: types.Message):
         #     disable_web_page_preview=True)
         button.add(
             types.InlineKeyboardButton(text="LIDER XONIMLAR MAKTABI", url="https://t.me/+zPTK_CCq-QE0Njk6"))
-        button.add(
-            types.InlineKeyboardButton(text="𝘾𝙝𝙚𝙠𝙡𝙤𝙫𝙡𝙖𝙧𝙨𝙞𝙯 𝙊𝙯𝙖𝙢𝙞𝙯", url="https://t.me/Cheklovlarsiz_Ozamiz_kanali"))
-        button.add(
-            types.InlineKeyboardButton(text="NISO Ayollar Akademiyasi", url="https://t.me/Niso_academy"))
-        button.add(
-            types.InlineKeyboardButton(text="Nafisa Motivator 👩🏻‍💻", url="https://t.me/Nafisa_Motivator"))
-        button.add(
-            types.InlineKeyboardButton(text="❤️ Intim gimnastika. ❤️", url="https://t.me/ayollaruchungimnastika"))
-        button.add(
-            types.InlineKeyboardButton(text="Turkona_Cooking❤️", url="https://t.me/turkona_cooking"))
-        button.add(
-            types.InlineKeyboardButton(text="QÒLI SHIRIN BEKAJON️", url="https://t.me/qolishirin_bekajon"))
-
+        counter = 0
+        for i in url:
+            button.add(types.InlineKeyboardButton(f"{channel_names[counter]}", url=f'https://t.me/{i}'))
+            counter += 1
         button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
         await message.answer(
@@ -582,19 +530,10 @@ async def my_score(message: types.Message):
         #
         button.add(
             types.InlineKeyboardButton(text="LIDER XONIMLAR MAKTABI", url="https://t.me/+zPTK_CCq-QE0Njk6"))
-        button.add(
-            types.InlineKeyboardButton(text="𝘾𝙝𝙚𝙠𝙡𝙤𝙫𝙡𝙖𝙧𝙨𝙞𝙯 𝙊𝙯𝙖𝙢𝙞𝙯", url="https://t.me/Cheklovlarsiz_Ozamiz_kanali"))
-        button.add(
-            types.InlineKeyboardButton(text="NISO Ayollar Akademiyasi", url="https://t.me/Niso_academy"))
-        button.add(
-            types.InlineKeyboardButton(text="Nafisa Motivator 👩🏻‍💻", url="https://t.me/Nafisa_Motivator"))
-        button.add(
-            types.InlineKeyboardButton(text="❤️ Intim gimnastika. ❤️", url="https://t.me/ayollaruchungimnastika"))
-        button.add(
-            types.InlineKeyboardButton(text="Turkona_Cooking❤️", url="https://t.me/turkona_cooking"))
-        button.add(
-            types.InlineKeyboardButton(text="QÒLI SHIRIN BEKAJON️", url="https://t.me/qolishirin_bekajon"))
-
+        counter = 0
+        for i in url:
+            button.add(types.InlineKeyboardButton(f"{channel_names[counter]}", url=f'https://t.me/{i}'))
+            counter += 1
         button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
         await message.answer(
@@ -671,18 +610,10 @@ async def score(message: types.Message):
         #     disable_web_page_preview=True)
         button.add(
             types.InlineKeyboardButton(text="LIDER XONIMLAR MAKTABI", url="https://t.me/+zPTK_CCq-QE0Njk6"))
-        button.add(
-            types.InlineKeyboardButton(text="𝘾𝙝𝙚𝙠𝙡𝙤𝙫𝙡𝙖𝙧𝙨𝙞𝙯 𝙊𝙯𝙖𝙢𝙞𝙯", url="https://t.me/Cheklovlarsiz_Ozamiz_kanali"))
-        button.add(
-            types.InlineKeyboardButton(text="NISO Ayollar Akademiyasi", url="https://t.me/Niso_academy"))
-        button.add(
-            types.InlineKeyboardButton(text="Nafisa Motivator 👩🏻‍💻", url="https://t.me/Nafisa_Motivator"))
-        button.add(
-            types.InlineKeyboardButton(text="❤️ Intim gimnastika. ❤️", url="https://t.me/ayollaruchungimnastika"))
-        button.add(
-            types.InlineKeyboardButton(text="Turkona_Cooking❤️", url="https://t.me/turkona_cooking"))
-        button.add(
-            types.InlineKeyboardButton(text="QÒLI SHIRIN BEKAJON️", url="https://t.me/qolishirin_bekajon"))
+        counter = 0
+        for i in url:
+            button.add(types.InlineKeyboardButton(f"{channel_names[counter]}", url=f'https://t.me/{i}'))
+            counter += 1
 
         button.add(types.InlineKeyboardButton(text="✅ Азо бўлдим", callback_data="check_subs"))
 
