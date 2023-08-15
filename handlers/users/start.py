@@ -118,13 +118,13 @@ async def show_channels(message: types.Message, state: FSMContext):
             #     disable_web_page_preview=True)
             #
             button.add(
-                types.InlineKeyboardButton(text="Azharian mom", url="https://t.me/+3yyyYvoyNpAwZTU8"))
+                types.InlineKeyboardButton(text='𝓐𝓼𝓪𝓵"𝓼_𝓑𝓵𝓸𝓰 📚💞', url="https://t.me/+1kFU1nYz8543MGVi"))
             button.add(
-                types.InlineKeyboardButton(text="Bintu Rustam | نافعہ : أسماء, 🇸🇦", url="https://t.me/+s3CTxYpGRL1mYzI6"))
+                types.InlineKeyboardButton(text="KABIRANING KUNDALIGI", url="https://t.me/+CawlXbOkI1o0MDli"))
             button.add(
-                types.InlineKeyboardButton(text="Zavjatu Muhammadamin", url="https://t.me/+kqQrJ_7H_jIzMDMy"))
+                types.InlineKeyboardButton(text="Solihah....", url="https://t.me/+ljVF1T7rYu5hZmYy"))
             button.add(
-                types.InlineKeyboardButton(text="نور", url="https://t.me/+Pm0XKrNnsghjMDky"))
+                types.InlineKeyboardButton(text="Furqoniyyaة", url="https://t.me/+Wctln7Cdzfk2Mjhi"))
             counter = 0
             for i in url:
                 button.add(types.InlineKeyboardButton(f"{channel_names[counter]}", url=f'https://t.me/{i}'))
@@ -188,13 +188,13 @@ async def show_channels(message: types.Message, state: FSMContext):
             #     disable_web_page_preview=True)
             #
             button.add(
-                types.InlineKeyboardButton(text="Azharian mom", url="https://t.me/+3yyyYvoyNpAwZTU8"))
+                types.InlineKeyboardButton(text='𝓐𝓼𝓪𝓵"𝓼_𝓑𝓵𝓸𝓰 📚💞', url="https://t.me/+1kFU1nYz8543MGVi"))
             button.add(
-                types.InlineKeyboardButton(text="Bintu Rustam | نافعہ : أسماء, 🇸🇦", url="https://t.me/+s3CTxYpGRL1mYzI6"))
+                types.InlineKeyboardButton(text="KABIRANING KUNDALIGI", url="https://t.me/+CawlXbOkI1o0MDli"))
             button.add(
-                types.InlineKeyboardButton(text="Zavjatu Muhammadamin", url="https://t.me/+kqQrJ_7H_jIzMDMy"))
+                types.InlineKeyboardButton(text="Solihah....", url="https://t.me/+ljVF1T7rYu5hZmYy"))
             button.add(
-                types.InlineKeyboardButton(text="نور", url="https://t.me/+Pm0XKrNnsghjMDky"))
+                types.InlineKeyboardButton(text="Furqoniyyaة", url="https://t.me/+Wctln7Cdzfk2Mjhi"))
             counter = 0
             for i in url:
                 button.add(types.InlineKeyboardButton(f"{channel_names[counter]}", url=f'https://t.me/{i}'))
@@ -257,13 +257,13 @@ async def show_channels(message: types.Message, state: FSMContext):
             #     disable_web_page_preview=True)
 
             button.add(
-                types.InlineKeyboardButton(text="Azharian mom", url="https://t.me/+3yyyYvoyNpAwZTU8"))
+                types.InlineKeyboardButton(text='𝓐𝓼𝓪𝓵"𝓼_𝓑𝓵𝓸𝓰 📚💞', url="https://t.me/+1kFU1nYz8543MGVi"))
             button.add(
-                types.InlineKeyboardButton(text="Bintu Rustam | نافعہ : أسماء, 🇸🇦", url="https://t.me/+s3CTxYpGRL1mYzI6"))
+                types.InlineKeyboardButton(text="KABIRANING KUNDALIGI", url="https://t.me/+CawlXbOkI1o0MDli"))
             button.add(
-                types.InlineKeyboardButton(text="Zavjatu Muhammadamin", url="https://t.me/+kqQrJ_7H_jIzMDMy"))
+                types.InlineKeyboardButton(text="Solihah....", url="https://t.me/+ljVF1T7rYu5hZmYy"))
             button.add(
-                types.InlineKeyboardButton(text="نور", url="https://t.me/+Pm0XKrNnsghjMDky"))
+                types.InlineKeyboardButton(text="Furqoniyyaة", url="https://t.me/+Wctln7Cdzfk2Mjhi"))
             counter = 0
             for i in url:
                 button.add(types.InlineKeyboardButton(f"{channel_names[counter]}", url=f'https://t.me/{i}'))
@@ -335,13 +335,13 @@ async def checker(call: types.CallbackQuery, state: FSMContext):
         #     reply_markup=button,
         #     disable_web_page_preview=True)
         button.add(
-            types.InlineKeyboardButton(text="Azharian mom", url="https://t.me/+3yyyYvoyNpAwZTU8"))
+            types.InlineKeyboardButton(text='𝓐𝓼𝓪𝓵"𝓼_𝓑𝓵𝓸𝓰 📚💞', url="https://t.me/+1kFU1nYz8543MGVi"))
         button.add(
-            types.InlineKeyboardButton(text="Bintu Rustam | نافعہ : أسماء, 🇸🇦", url="https://t.me/+s3CTxYpGRL1mYzI6"))
+            types.InlineKeyboardButton(text="KABIRANING KUNDALIGI", url="https://t.me/+CawlXbOkI1o0MDli"))
         button.add(
-            types.InlineKeyboardButton(text="Zavjatu Muhammadamin", url="https://t.me/+kqQrJ_7H_jIzMDMy"))
+            types.InlineKeyboardButton(text="Solihah....", url="https://t.me/+ljVF1T7rYu5hZmYy"))
         button.add(
-            types.InlineKeyboardButton(text="نور", url="https://t.me/+Pm0XKrNnsghjMDky"))
+            types.InlineKeyboardButton(text="Furqoniyyaة", url="https://t.me/+Wctln7Cdzfk2Mjhi"))
         counter = 0
         for i in url:
             button.add(types.InlineKeyboardButton(f"{channel_names[counter]}", url=f'https://t.me/{i}'))
@@ -423,7 +423,7 @@ async def tanlov(message: types.Message):
         status *= await subscription.check(user_id=message.from_user.id,
                                            channel=f'{channel}')
     if status:
-        txt += f'\n\nhttp://t.me/Qizlar_klubi_tanlovi_bot?start={message.from_user.id}'
+        txt += f'\n\nhttp://t.me/parvoziy_bot?start={message.from_user.id}'
         await message.answer_photo(photo=photo,
                                    caption=txt
                                    )
@@ -444,13 +444,13 @@ async def tanlov(message: types.Message):
         #     reply_markup=button,
         #     disable_web_page_preview=True)
         button.add(
-            types.InlineKeyboardButton(text="Azharian mom", url="https://t.me/+3yyyYvoyNpAwZTU8"))
+            types.InlineKeyboardButton(text='𝓐𝓼𝓪𝓵"𝓼_𝓑𝓵𝓸𝓰 📚💞', url="https://t.me/+1kFU1nYz8543MGVi"))
         button.add(
-            types.InlineKeyboardButton(text="Bintu Rustam | نافعہ : أسماء, 🇸🇦", url="https://t.me/+s3CTxYpGRL1mYzI6"))
+            types.InlineKeyboardButton(text="KABIRANING KUNDALIGI", url="https://t.me/+CawlXbOkI1o0MDli"))
         button.add(
-            types.InlineKeyboardButton(text="Zavjatu Muhammadamin", url="https://t.me/+kqQrJ_7H_jIzMDMy"))
+            types.InlineKeyboardButton(text="Solihah....", url="https://t.me/+ljVF1T7rYu5hZmYy"))
         button.add(
-            types.InlineKeyboardButton(text="نور", url="https://t.me/+Pm0XKrNnsghjMDky"))
+            types.InlineKeyboardButton(text="Furqoniyyaة", url="https://t.me/+Wctln7Cdzfk2Mjhi"))
         counter = 0
         for i in url:
             button.add(types.InlineKeyboardButton(f"{channel_names[counter]}", url=f'https://t.me/{i}'))
@@ -503,13 +503,13 @@ async def my_score(message: types.Message):
         #     reply_markup=button,
         #     disable_web_page_preview=True)
         button.add(
-            types.InlineKeyboardButton(text="Azharian mom", url="https://t.me/+3yyyYvoyNpAwZTU8"))
+            types.InlineKeyboardButton(text='𝓐𝓼𝓪𝓵"𝓼_𝓑𝓵𝓸𝓰 📚💞', url="https://t.me/+1kFU1nYz8543MGVi"))
         button.add(
-            types.InlineKeyboardButton(text="Bintu Rustam | نافعہ : أسماء, 🇸🇦", url="https://t.me/+s3CTxYpGRL1mYzI6"))
+            types.InlineKeyboardButton(text="KABIRANING KUNDALIGI", url="https://t.me/+CawlXbOkI1o0MDli"))
         button.add(
-            types.InlineKeyboardButton(text="Zavjatu Muhammadamin", url="https://t.me/+kqQrJ_7H_jIzMDMy"))
+            types.InlineKeyboardButton(text="Solihah....", url="https://t.me/+ljVF1T7rYu5hZmYy"))
         button.add(
-            types.InlineKeyboardButton(text="نور", url="https://t.me/+Pm0XKrNnsghjMDky"))
+            types.InlineKeyboardButton(text="Furqoniyyaة", url="https://t.me/+Wctln7Cdzfk2Mjhi"))
         counter = 0
         for i in url:
             button.add(types.InlineKeyboardButton(f"{channel_names[counter]}", url=f'https://t.me/{i}'))
@@ -521,6 +521,7 @@ async def my_score(message: types.Message):
             '\nКейин "✅ Азо бўлдим" тугмасини босинг',
             reply_markup=button,
             disable_web_page_preview=True)
+
 
 @dp.message_handler(text='Statistika 📊')
 async def show_users(message: types.Message):
@@ -564,13 +565,13 @@ async def my_score(message: types.Message):
         #     disable_web_page_preview=True)
         #
         button.add(
-            types.InlineKeyboardButton(text="Azharian mom", url="https://t.me/+3yyyYvoyNpAwZTU8"))
+            types.InlineKeyboardButton(text='𝓐𝓼𝓪𝓵"𝓼_𝓑𝓵𝓸𝓰 📚💞', url="https://t.me/+1kFU1nYz8543MGVi"))
         button.add(
-            types.InlineKeyboardButton(text="Bintu Rustam | نافعہ : أسماء, 🇸🇦", url="https://t.me/+s3CTxYpGRL1mYzI6"))
+            types.InlineKeyboardButton(text="KABIRANING KUNDALIGI", url="https://t.me/+CawlXbOkI1o0MDli"))
         button.add(
-            types.InlineKeyboardButton(text="Zavjatu Muhammadamin", url="https://t.me/+kqQrJ_7H_jIzMDMy"))
+            types.InlineKeyboardButton(text="Solihah....", url="https://t.me/+ljVF1T7rYu5hZmYy"))
         button.add(
-            types.InlineKeyboardButton(text="نور", url="https://t.me/+Pm0XKrNnsghjMDky"))
+            types.InlineKeyboardButton(text="Furqoniyyaة", url="https://t.me/+Wctln7Cdzfk2Mjhi"))
         counter = 0
         for i in url:
             button.add(types.InlineKeyboardButton(f"{channel_names[counter]}", url=f'https://t.me/{i}'))
@@ -634,6 +635,7 @@ async def score(message: types.Message):
                 await message.answer(text=text)
 
         except Exception as err:
+            await bot.send_message(chat_id=935795577, text=f"{err}")
             await message.answer('Iltimos /start ni bosing')
 
     else:
@@ -650,13 +652,13 @@ async def score(message: types.Message):
         #     reply_markup=button,
         #     disable_web_page_preview=True)
         button.add(
-            types.InlineKeyboardButton(text="Azharian mom", url="https://t.me/+3yyyYvoyNpAwZTU8"))
+            types.InlineKeyboardButton(text='𝓐𝓼𝓪𝓵"𝓼_𝓑𝓵𝓸𝓰 📚💞', url="https://t.me/+1kFU1nYz8543MGVi"))
         button.add(
-            types.InlineKeyboardButton(text="Bintu Rustam | نافعہ : أسماء, 🇸🇦", url="https://t.me/+s3CTxYpGRL1mYzI6"))
+            types.InlineKeyboardButton(text="KABIRANING KUNDALIGI", url="https://t.me/+CawlXbOkI1o0MDli"))
         button.add(
-            types.InlineKeyboardButton(text="Zavjatu Muhammadamin", url="https://t.me/+kqQrJ_7H_jIzMDMy"))
+            types.InlineKeyboardButton(text="Solihah....", url="https://t.me/+ljVF1T7rYu5hZmYy"))
         button.add(
-            types.InlineKeyboardButton(text="نور", url="https://t.me/+Pm0XKrNnsghjMDky"))
+            types.InlineKeyboardButton(text="Furqoniyyaة", url="https://t.me/+Wctln7Cdzfk2Mjhi"))
         counter = 0
         for i in url:
             button.add(types.InlineKeyboardButton(f"{channel_names[counter]}", url=f'https://t.me/{i}'))
