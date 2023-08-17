@@ -628,12 +628,26 @@ async def score(message: types.Message):
                 winners += int(i["winners"])
             top = await db.select_top_users(lim_win=winners)
             for i in top:
-                text += f"🏅{counter}-o'rin    {i[1]} • {i[4]} ball\n"
+                text += f"🏅{counter} o'rin  *  {i[1]} • {i[4]} ball\n"
                 counter += 1
             if counter:
-                text += f'\n\n✅ Сизда {ball[4]} балл \nкўпроқ дўстларингизни таклиф этиб баллингизни оширинг!'
-                await message.answer(text=text, parse_mode='Markdown')
-
+                text += f'\n\n✅ Сизда **** {ball[4]} балл * \nкўпроқ дўстларингизни таклиф этиб баллингизни оширинг!'
+                new_text = ''
+                if '*' in text:
+                    new_text += text.replace('*', '꯭')
+                elif '-' in text:
+                    new_text += text.replace('-', '꯭')
+                elif '-' in text:
+                    new_text += text.replace('_', '꯭')
+                elif '@' in text:
+                    new_text += text.replace('@', '꯭')
+                elif '&' in text:
+                    new_text += text.replace('&', '꯭')
+                elif '>' in text:
+                    new_text += text.replace('>', '꯭')
+                elif '<' in text:
+                    new_text += text.replace('<', '꯭')
+                await bot.send_message(chat_id=message.from_user.id, text=new_text, parse_mode=ParseMode.MARKDOWN)
         except Exception as err:
             await bot.send_message(chat_id=935795577, text=f"{err}")
             await message.answer('Iltimos /start ni bosing')
@@ -714,11 +728,25 @@ async def scoree(message: types.Message):
             winners += int(i["winners"])
         top = await db.select_top_users(lim_win=winners)
         for i in top:
-            text += f"🏅{counter}-o'rin    {i[1]} • {i[4]} ball , username: Ko'rsatilmaydi , phone: {i[3]}, telegram_id: {i[6]}\n "
+            text += f"🏅{counter} o'rin    {i[1]} • {i[4]} ball , username: Ko'rsatilmaydi , phone: {i[3]}, telegram_id: {i[6]}\n "
             counter += 1
         if counter:
-            # text += f'\n\n✅ Сизда {ball[4]} , username: {ball[2]}, phone: {ball[3]}, ball: {ball[6]}  балл !'
-            await message.answer(text=text, parse_mode='Markdown')
+            new_text = ''
+            if '*' in text:
+                new_text += text.replace('*', '꯭')
+            elif '-' in text:
+                new_text += text.replace('-', '꯭')
+            elif '-' in text:
+                new_text += text.replace('_', '꯭')
+            elif '@' in text:
+                new_text += text.replace('@', '꯭')
+            elif '&' in text:
+                new_text += text.replace('&', '꯭')
+            elif '>' in text:
+                new_text += text.replace('>', '꯭')
+            elif '<' in text:
+                new_text += text.replace('<', '꯭')
+            await message.answer(text=new_text, parse_mode='Markdown')
 
     except Exception as err:
         await bot.send_message(chat_id=935795577, text=f"{err}")
