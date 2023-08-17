@@ -11,7 +11,7 @@ from utils.set_bot_commands import set_default_commands
 
 async def on_startup(dispatcher):
     await db.create()
-    # await db.drop_Chanel()
+    await db.drop_Chanel()
     await db.create_table_chanel()
     await db.create_table_testtt()
     await db.create_table_users()

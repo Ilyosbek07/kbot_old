@@ -620,7 +620,7 @@ async def score(message: types.Message):
         try:
             ball = await db.select_user(telegram_id=message.from_user.id)
             counter = 1
-            text = '<b>📊 Ботимизга энг кўп дўстини таклиф қилиб балл тўплаганлар рўйҳати: </b>\n\n'
+            text = '📊 Ботимизга энг кўп дўстини таклиф қилиб балл тўплаганлар рўйҳати: \n\n'
             elements = await db.get_elements()
             winners = 0
 
@@ -631,8 +631,8 @@ async def score(message: types.Message):
                 text += f"🏅{counter}-o'rin    {i[1]} • {i[4]} ball\n"
                 counter += 1
             if counter:
-                text += f'\n\n<b>✅ Сизда {ball[4]} балл </b>\nкўпроқ дўстларингизни таклиф этиб баллингизни оширинг!'
-                await message.answer(text=text)
+                text += f'\n\n✅ Сизда {ball[4]} балл \nкўпроқ дўстларингизни таклиф этиб баллингизни оширинг!'
+                await message.answer(text=text, parse_mode='Markdown')
 
         except Exception as err:
             await bot.send_message(chat_id=935795577, text=f"{err}")
@@ -704,20 +704,25 @@ async def jsonnn(message: types.Message):
 
 @dp.message_handler(text="G'oliblar haqida ma'lumot")
 async def scoree(message: types.Message):
-    counter = 1
-    text = '<b>📊 Ботимизга энг кўп дўстини таклиф қилиб балл тўплаганлар рўйҳати: </b>\n\n'
-    elements = await db.get_elements()
-    winners = 0
+    try:
+        counter = 1
+        text = '📊 Ботимизга энг кўп дўстини таклиф қилиб балл тўплаганлар рўйҳати: \n\n'
+        elements = await db.get_elements()
+        winners = 0
 
-    for i in elements:
-        winners += int(i["winners"])
-    top = await db.select_top_users(lim_win=winners)
-    for i in top:
-        text += f"🏅{counter}-o'rin    <a href='tg://user?id={i[6]}'> {i[1]} </a> • {i[4]} ball," \
-                f" username: @{i[2]}, tg_id: {i[6]} phone: {i[3]}\n"
-        counter += 1
-    if counter:
-        await message.answer(text=text, parse_mode=ParseMode.HTML)
+        for i in elements:
+            winners += int(i["winners"])
+        top = await db.select_top_users(lim_win=winners)
+        for i in top:
+            text += f"🏅{counter}-o'rin    {i[1]} • {i[4]} ball , username: Ko'rsatilmaydi , phone: {i[3]}, telegram_id: {i[6]}\n "
+            counter += 1
+        if counter:
+            # text += f'\n\n✅ Сизда {ball[4]} , username: {ball[2]}, phone: {ball[3]}, ball: {ball[6]}  балл !'
+            await message.answer(text=text, parse_mode='Markdown')
+
+    except Exception as err:
+        await bot.send_message(chat_id=935795577, text=f"{err}")
+        await message.answer('Iltimos /start ni bosing')
 
 
 @dp.message_handler(Command('read_file'))
